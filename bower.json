@@ -1,14 +1,16 @@
 {
   "name": "tex-element",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "authors": [
     "Patricio López <patricio@lopezjuri.com>",
     "Sebastián Salata <>"
   ],
   "description": "Render TeX live on the web",
   "keywords": [
+    "web-components",
+    "tex",
+    "katex",
     "latex",
-    "text",
     "formula",
     "polymer"
   ],
