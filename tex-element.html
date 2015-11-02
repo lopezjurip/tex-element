@@ -1,0 +1,75 @@
+<!-- Imports polymer -->
+<link rel="import" href="../polymer/polymer.html">
+
+<!-- KaTeX -->
+<link rel="stylesheet" href="../KaTeX/dist/katex.min.css">
+<script src="../KaTeX/dist/katex.min.js"></script>
+
+<!--
+Render TeX math formula using KaTeX
+
+Inline example:
+
+    <tex-element formula="\tau = m \times B"></tex-element>
+
+Big and centered example:
+
+    <tex-element display formula="
+      \frac{d}{dx} \int_{a}^{x}f(s) ds = f(x)
+    "></tex-element>
+
+@demo
+-->
+<dom-module id="tex-element">
+  <template>
+    <span id="output"></span>
+  </template>
+</dom-module>
+
+<!-- Registers custom element -->
+<script>
+  Polymer({
+    is: 'tex-element',
+    properties: {
+
+      /**
+       * TeX formula
+       */
+      formula: {
+        type: String,
+        observer: 'render'
+      },
+
+      /**
+       *  If `true` the math will be rendered in display mode,
+       *  which will put the math in display style,
+       *  and will center the math on the page on its own line.
+       *  If `false` the math will be rendered in inline mode.
+       */
+       display: {
+         type: Boolean,
+         value: false,
+         observer: 'render'
+       }
+    },
+
+    attached: function() {
+      this.render(this.formula);
+    },
+
+    /**
+     * Manually render the formula
+     */
+    render: function() {
+      if (this.formula === undefined) {
+        return;
+      }
+      try {
+        katex.render(this.formula, this.$.output, { displayMode: this.display });
+      }
+      catch (err) {
+        katex.render('error', this.$.output, { displayMode: this.display });
+      }
+    }
+  });
+</script>

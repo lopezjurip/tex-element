@@ -1,0 +1,30 @@
+<!-- Imports polymer -->
+<link rel="import" href="../tex-element.html">
+<link rel="import" href="../../paper-input/paper-textarea.html">
+<link rel="import" href="../../paper-checkbox/paper-checkbox.html">
+
+<dom-module id="tex-edit">
+  <template>
+    <tex-element display={{display}} formula={{formula}}></tex-element>
+    <br>
+    <paper-textarea label="LaTeX Formula" type="text" value="{{formula::input}}"></paper-textarea>
+    <br>
+    <paper-checkbox checked={{display}}>Display centered</paper-checkbox>
+  </template>
+</dom-module>
+
+<script>
+  Polymer({
+    is: 'tex-edit',
+    properties: {
+      formula: {
+        type: String,
+        value: ''
+      },
+      display: {
+        type: Boolean,
+        value: true
+      }
+    },
+  });
+</script>
