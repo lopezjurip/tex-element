@@ -1,0 +1,35 @@
+{
+  "name": "tex-element",
+  "version": "0.1.2",
+  "authors": [
+    "Patricio López <patricio@lopezjuri.com>",
+    "Sebastián Salata <>"
+  ],
+  "description": "Render TeX live on the web using KaTeX",
+  "keywords": [
+    "web-components",
+    "tex",
+    "katex",
+    "latex",
+    "formula",
+    "polymer"
+  ],
+  "main": "tex-element.html",
+  "license": "http://polymer.github.io/LICENSE.txt",
+  "homepage": "https://github.com/mrpatiwi/tex-element",
+  "ignore": [
+    "/.*",
+    "/test/",
+    "/demo/"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.0.0",
+    "KaTeX": "katex#~0.5.1",
+    "paper-checkbox": "PolymerElements/paper-checkbox#~1.0.13"
+  },
+  "devDependencies": {
+    "paper-input": "PolymerElements/paper-input#~1.0.18",
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "web-component-tester": "*"
+  }
+}
