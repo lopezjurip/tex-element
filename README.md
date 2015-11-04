@@ -2,6 +2,8 @@
 
 Render TeX live on the web using KaTeX.
 
+> [Live **Demo** using a text-input in Polymer.](http://mrpatiwi.github.io/tex-element)
+
 ## Usage
 
 Install via Bower:

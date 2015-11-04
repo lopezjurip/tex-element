@@ -24,7 +24,8 @@
   ],
   "dependencies": {
     "polymer": "Polymer/polymer#^1.0.0",
-    "KaTeX": "katex#~0.5.1"
+    "KaTeX": "katex#~0.5.1",
+    "paper-checkbox": "PolymerElements/paper-checkbox#~1.0.13"
   },
   "devDependencies": {
     "paper-input": "PolymerElements/paper-input#~1.0.18",
