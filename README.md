@@ -9,7 +9,7 @@ Render TeX live on the web using KaTeX.
 Install via Bower:
 
 ```sh
-npm install --save tex-element
+bower install --save tex-element
 ```
 
 Import it directly:
